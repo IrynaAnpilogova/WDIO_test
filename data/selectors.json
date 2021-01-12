@@ -1,0 +1,22 @@
+{
+  "email" :"#normal_login_email",
+  "password" : "#normal_login_password",
+  "button_log_in" : ".ant-btn",
+  "error_required" : ".ant-form-item-explain-error",
+  "error_email_is_not_valid" : "//div[@class=\"ant-col ant-form-item-control\" and div//input[@id=\"normal_login_email\"]]//div[@role=\"alert\"]",
+  "error_password_is_required": "//div[@class=\"ant-col ant-form-item-control\" and div//input[@id=\"normal_login_password\"]] //div[@role=\"alert\"]",
+  "header" : "//h1",
+  "headerChallenges" : "//div[contains(text(), 'Challenges')]",
+  "auth_failed": ".ant-notification-notice-closable",
+  "linkCourses": "//a[contains(text(), 'Courses')]",
+  "statusCourses": "//div[@data-qa = 'topmenu-Courses']",
+  "linkCards": "//a[contains(text(), 'Cards')]",
+  "statusCards": "//div[@data-qa = 'topmenu-Cards']",
+  "linkDiary": "//a[contains(text(), 'Diary')]",
+  "statusDiary": "//div[@data-qa = 'topmenu-Diary']",
+  "linkGroups": "//a[contains(text(), 'Groups')]",
+  "statusGroups": "//div[@data-qa = 'topmenu-Groups']",
+  "linkChallenges": "//a[contains(text(), 'Challenges')]",
+  "statusChallenges": "//div[@data-qa = 'topmenu-Challenges']"
+
+}
