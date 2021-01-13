@@ -21,6 +21,8 @@ exports.config = {
     ],
     // Patterns to exclude.
     exclude: [
+        './test/specs/mainMenu.js',
+        './test/specs/example.e2e.js',
         // 'path/to/excluded/files'
     ],
     //
@@ -54,9 +56,9 @@ exports.config = {
         //
         browserName: 'chrome',
         acceptInsecureCerts: true,
-        'goog:chromeOptions': {
-            args: ['--headless', '--disable-gpu']
-        }
+        // 'goog:chromeOptions': {
+        //     args: ['--headless', '--disable-gpu']
+        // }
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs

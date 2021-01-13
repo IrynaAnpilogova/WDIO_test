@@ -17,6 +17,6 @@
   "linkGroups": "//a[contains(text(), 'Groups')]",
   "statusGroups": "//div[@data-qa = 'topmenu-Groups']",
   "linkChallenges": "//a[contains(text(), 'Challenges')]",
-  "statusChallenges": "//div[@data-qa = 'topmenu-Challenges']"
-
+  "statusChallenges": "//div[@data-qa = 'topmenu-Challenges']",
+  "buttonCreate": "//button[contains(., 'Create Challenge')]"
 }

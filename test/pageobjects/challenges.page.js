@@ -5,6 +5,7 @@ class ChallengesPage extends Page {
 
     get statusChallenges() { return $(selectors.statusChallenges) }
     get headerChallenges() { return $(selectors.headerChallenges) }
+    get buttonCreate() {return $(selectors.buttonCreate)}
 
 
 }
