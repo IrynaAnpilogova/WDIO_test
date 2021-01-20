@@ -12,6 +12,7 @@ import ChallengesPage  from '../pageobjects/challenges.page';
 
 import LoginPage from "../pageobjects/login.page";
 import ProfilePage from "../pageobjects/profile.page";
+import selectors from "../../data/selectors.json";
 
 
     describe('Create challenge ' ,() => {
@@ -35,7 +36,7 @@ import ProfilePage from "../pageobjects/profile.page";
 
             describe('for role student', () => {
 
-                it(' ', () => {
+                it('link Challenges is displayed ', () => {
                     LoginPage.login(credentials[2].username, credentials[2].password);
                     expect(ProfilePage.linkChallenges).toBeExisting();
                     ProfilePage.linkChallenges.click();
@@ -45,17 +46,34 @@ import ProfilePage from "../pageobjects/profile.page";
                     expect(ChallengesPage.buttonCreate).toBeEnabled();
                 });
 
-                it('should have button Create Challenge on Challenges Page ', () => {
+                it('should open the drawer when the button Create Challenge has been clicked  ', () => {
                     ChallengesPage.buttonCreate.click();
+                    // expect(ChallengesPage.drawerCreateNewChallenge).toBeDisplayed();
+                    expect(ChallengesPage.buttonValidateSolution).toBeExisting();
+
+
                 });
 
+                // it('should open the drawer when the button Create Challenge has been clicked  ', () => {
+                //     ChallengesPage.buttonCreate.click();
+                //     // expect(ChallengesPage.drawerCreateNewChallenge).toBeDisplayed();
+                //     (ChallengesPage.drawerCreateNewChallenge).waitUntil(function () {
+                //         return this.isDisplayed() === true;
+                //     }, {
+                //         timeout: 5000,
+                //         timeoutMsg: 'expected element is displayes in 5c'
+                //     });
+                // });
+                //
+                // it('should open the drawer when the button Create Challenge has been clicked  ', () => {
+                //     expect(ChallengesPage.drawerCreateNewChallenge).toHaveText('Create new Challenge');
+                // });
 
-
+                // it('the drawer Create new Challenge buttons', () => {
+                //     expect(ChallengesPage.buttonValidateSolution).toBeEnabled();
+                //     expect(ChallengesPage.buttonSendToReview).toBeDisabled();
+                // });
             });
-
-
-
-
 
 
 

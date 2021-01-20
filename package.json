@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx wdio run wdio.conf.js",
+    "test:chrome": "npx wdio run chrome.conf.js",
+    "test:chrome:headless": "npx wdio run chrome.headless.conf.js",
+    "test:firefox": "npx wdio run firefox.conf.js",
+    "test:firefox:headless": "npx wdio run firefox.headless.conf.js",
     "report:generate": "npx allure generate allure-results -o allure-report --clean",
     "report:open": "npx allure open allure-report"
   },
@@ -23,8 +26,10 @@
     "@wdio/spec-reporter": "^6.10.6",
     "@wdio/sync": "^6.10.7",
     "allure-commandline": "^2.13.8",
-    "chromedriver": "^87.0.2",
+    "chromedriver": "^87.0.5",
+    "geckodriver": "^1.21.1",
     "local": "^0.3.3",
-    "wdio-chromedriver-service": "^6.0.4"
+    "wdio-chromedriver-service": "^6.0.4",
+    "wdio-geckodriver-service": "^1.1.1"
   }
 }

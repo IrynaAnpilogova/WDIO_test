@@ -29,7 +29,7 @@ describe('My application\'s top menu ' , () => {
         LoginPage.open();
     });
 
-    xdescribe('for user with role Admin', () => {
+    describe('for user with role Admin', () => {
 
         it(' Link Courses should be displayed', () => {
             LoginPage.login(credentials[1].username, credentials[1].password);
