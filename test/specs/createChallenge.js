@@ -48,31 +48,19 @@ import selectors from "../../data/selectors.json";
 
                 it('should open the drawer when the button Create Challenge has been clicked  ', () => {
                     ChallengesPage.buttonCreate.click();
-                    // expect(ChallengesPage.drawerCreateNewChallenge).toBeDisplayed();
-                    expect(ChallengesPage.buttonValidateSolution).toBeExisting();
-
-
+                    expect(ChallengesPage.drawerCreateNewChallenge).toBeDisplayed();
+                    // expect(ChallengesPage.buttonValidateSolution).toBeExisting();
                 });
 
-                // it('should open the drawer when the button Create Challenge has been clicked  ', () => {
-                //     ChallengesPage.buttonCreate.click();
-                //     // expect(ChallengesPage.drawerCreateNewChallenge).toBeDisplayed();
-                //     (ChallengesPage.drawerCreateNewChallenge).waitUntil(function () {
-                //         return this.isDisplayed() === true;
-                //     }, {
-                //         timeout: 5000,
-                //         timeoutMsg: 'expected element is displayes in 5c'
-                //     });
-                // });
-                //
-                // it('should open the drawer when the button Create Challenge has been clicked  ', () => {
-                //     expect(ChallengesPage.drawerCreateNewChallenge).toHaveText('Create new Challenge');
-                // });
 
-                // it('the drawer Create new Challenge buttons', () => {
-                //     expect(ChallengesPage.buttonValidateSolution).toBeEnabled();
-                //     expect(ChallengesPage.buttonSendToReview).toBeDisabled();
-                // });
+                it('should open the drawer when the button Create Challenge has been clicked  ', () => {
+                    expect(ChallengesPage.drawerCreateNewChallenge).toHaveText('Create new Challenge');
+                });
+
+                it('the drawer Create new Challenge has buttons', () => {
+                    expect(ChallengesPage.buttonValidateSolution).toBeEnabled();
+                    expect(ChallengesPage.buttonSendToReview).toBeDisabled();
+                });
             });
 
 

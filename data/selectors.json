@@ -21,5 +21,7 @@
   "buttonCreate": "//button[contains(., 'Create Challenge')]",
   "buttonValidateSolution": "//button[contains(., 'Validate solution')]",
   "buttonSendToReview": "//button[contains(., 'Send to review')]",
-  "drawerCreateNewChallenge": "//div[@class='ant-drawer-title']"
+  "drawerCreateNewChallenge": "//div[@class='ant-drawer-title']",
+  "searchChallenge": "#name"
+
 }

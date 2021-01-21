@@ -1,8 +1,7 @@
 import ChallengesPage  from '../pageobjects/challenges.page';
-
 import LoginPage from "../pageobjects/login.page";
 import ProfilePage from "../pageobjects/profile.page";
-import selectors from "../../data/selectors.json";
+
 
 
 describe('Challenges main page ' ,() => {
@@ -32,12 +31,18 @@ describe('Challenges main page ' ,() => {
             ProfilePage.linkChallenges.click();
         });
 
+
+
         it(' test 1 challenges on the page by default', () => {
-            expect($$('//table/tbody/tr/td[@class=\'ant-table-cell\'][1]')).toBeElementsArrayOfSize(28);
+            let numberOfRows = $('.ml-3.h-100.d-flex.small').getText().split(' ')[1];
+            numberOfRows = +numberOfRows;
+            expect($$('.ant-table-row')).toBeElementsArrayOfSize(numberOfRows);
         });
 
         it(' test 3 filter - name of challenge ', () => {
-            $('#name').setValue('Anagram');
+
+            ChallengesPage.searchChallenge.setValue('Anagram');
+            // $('#name').setValue('Anagram');
             browser.pause(3000);
             let numberOfRows = $$('//table/tbody/tr/td[@class="ant-table-cell"][1]').length;
             expect($$('//table/tbody/tr/td[@class=\'ant-table-cell\'][1]')).toBeElementsArrayOfSize(numberOfRows);
@@ -54,9 +59,12 @@ describe('Challenges main page ' ,() => {
 
 
         it('after clear search field the number of challenges on the page is by default', () => {
-            $('#name').click();
-            ChallengesPage.clearInput($('#name'));
-            expect($$('//table/tbody/tr/td[@class=\'ant-table-cell\'][1]')).toBeElementsArrayOfSize(28);
+            ChallengesPage.searchChallenge.click();
+            ChallengesPage.clearInput(ChallengesPage.searchChallenge);
+            let numberOfRows = $('.ml-3.h-100.d-flex.small').getText().split(' ')[1];
+            numberOfRows = +numberOfRows;
+            expect($$('.ant-table-row')).toBeElementsArrayOfSize(numberOfRows);
+
         });
 
 

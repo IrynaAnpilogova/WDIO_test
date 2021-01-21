@@ -1,6 +1,7 @@
 module.exports = {
     specs: [
         './test/specs/createChallenge.js'
+
     ],
 
     logLevel: 'info',
