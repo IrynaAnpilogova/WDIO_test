@@ -10,6 +10,7 @@ class ChallengesPage extends Page {
     get buttonSendToReview() {return $(selectors.buttonSendToReview)}
     get drawerCreateNewChallenge() {return $(selectors.drawerCreateNewChallenge)}
     get searchChallenge() {return $(selectors.searchChallenge)}
+    get programmingLang() {return $(selectors.programmingLang)}
 
 
 

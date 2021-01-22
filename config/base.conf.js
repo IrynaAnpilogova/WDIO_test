@@ -1,6 +1,6 @@
 module.exports = {
     specs: [
-        './test/specs/createChallenge.js'
+        './test/specs/challengesMainPage.js'
 
     ],
 
