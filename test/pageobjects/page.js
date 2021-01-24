@@ -18,6 +18,8 @@ class Page {
     get linkDiary () {return $(selectors.linkDiary) }
     get linkGroups () {return $(selectors.linkGroups) }
     get linkChallenges () {return $(selectors.linkChallenges) }
+    get linkShop () {return $(selectors.linkShop) }
+    get linkChat () {return $(selectors.linkChat) }
 
 
     clearInput (element) {

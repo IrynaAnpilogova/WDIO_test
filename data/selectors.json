@@ -17,12 +17,15 @@
   "linkGroups": "//a[contains(text(), 'Groups')]",
   "statusGroups": "//div[@data-qa = 'topmenu-Groups']",
   "linkChallenges": "//a[contains(text(), 'Challenges')]",
+  "linkShop": "//a[contains(text(), 'Shop')]",
+  "linkChat": "//a[contains(text(), 'Chat')]",
   "statusChallenges": "//div[@data-qa = 'topmenu-Challenges']",
   "buttonCreate": "//button[contains(., 'Create Challenge')]",
   "buttonValidateSolution": "//button[contains(., 'Validate solution')]",
   "buttonSendToReview": "//button[contains(., 'Send to review')]",
   "drawerCreateNewChallenge": "//div[@class='ant-drawer-title']",
   "searchChallenge": "#name",
-  "programmingLang": "#programmingLang"
-
+  "programmingLang": "#programmingLang",
+  "challengeName": "#challengeForm_name",
+  "addInstruction": "#challengeForm_instruction"
 }

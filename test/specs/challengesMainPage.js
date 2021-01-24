@@ -99,8 +99,29 @@ describe('Challenges main page ' ,() => {
             $('.anticon.anticon-close-circle').click();
         });
 
-        it(' test_8 filter - programming language - All languages ', () => {
+        it('should wait until page is reloaded', () => {
+            const elem = $('.h1');
+            elem.waitForDisplayed({ timeout: 1000 });
+        });
+
+        it('should find the arrow and click it', () => {
+            const arrow = $('#programmingLang');
+            const location = arrow.getLocation();
+            console.log(location);
+
+            const xLocation = arrow.getLocation('x');
+            console.log(xLocation);
+
+            const yLocation = arrow.getLocation('.ant-select-arrow', 'y');
+            console.log(yLocation);
+
+            $('#programmingLang').moveTo({ xLocation, yLocation });
+            browser.pause(3000);
             $('#programmingLang').click();
+        });
+
+        it(' test_8 filter - programming language - All languages ', () => {
+            // $('.ant-select-arrow').click();
             $$('.ant-select-item-option-content')[2].click(); // Java Script
             let numberOfRows = $('.ml-3.h-100.d-flex.small').getText().split(' ')[1];
             numberOfRows = +numberOfRows;

@@ -1,18 +1,8 @@
-// import LoginPage from '../pageobjects/login.page';
-// import ProfilePage from '../pageobjects/profile.page';
 
-
-// import LocalCoding from '../pageobjects/localCoding';
-// import CoursesPage from '../pageobjects/courses.page';
-// import CardsPage  from '../pageobjects/cards.page';
-// import DiaryPage  from '../pageobjects/diary.page';
-// import GroupsPage  from '../pageobjects/groups.page';
 import ChallengesPage  from '../pageobjects/challenges.page';
-
-
 import LoginPage from "../pageobjects/login.page";
 import ProfilePage from "../pageobjects/profile.page";
-import selectors from "../../data/selectors.json";
+
 
 
     describe('Create challenge ' ,() => {
@@ -61,7 +51,36 @@ import selectors from "../../data/selectors.json";
                     expect(ChallengesPage.buttonValidateSolution).toBeEnabled();
                     expect(ChallengesPage.buttonSendToReview).toBeDisabled();
                 });
+
+                it('create new challenge  ', () => {
+                    ChallengesPage.fillOutFormByTemplate.click();
+
+                    ChallengesPage.challengeName.click();
+                    ChallengesPage.clearInput(ChallengesPage.challengeName);
+                    ChallengesPage.challengeName.setValue('Test_challenge_1');
+
+                    ChallengesPage.addInstruction.click();
+                    ChallengesPage.clearInput(ChallengesPage.addInstruction);
+                    ChallengesPage.addInstruction.setValue('Write a script');
+
+                    ChallengesPage.buttonValidateSolution.click();
+                    expect($('//h5')).toHaveText('Congratulations! All tests have passed.');
+                    ChallengesPage.buttonSendToReview.click();
+                    expect(ChallengesPage.buttonSendToReview).toBeEnabled();
+
+                });
+
+                it('make sure the new challenge appeared on the admin page ', () => {
+
+
+                })
+
+
+
+
             });
+
+
 
 
 })
