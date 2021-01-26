@@ -16,6 +16,10 @@ import ProfilePage from "../pageobjects/profile.page";
                 password: "7896542"
             },
             {
+                username: "testermike@mail.ru", // student
+                password: "12345"
+            },
+            {
                 username: "iryna.anpilogova@gmail.com", // student
                 password: "123456"
             }
@@ -24,7 +28,7 @@ import ProfilePage from "../pageobjects/profile.page";
             LoginPage.open();
         });
 
-            describe('for role student', () => {
+            describe('using template for role student', () => {
 
                 it('link Challenges is displayed ', () => {
                     LoginPage.login(credentials[2].username, credentials[2].password);
@@ -65,12 +69,29 @@ import ProfilePage from "../pageobjects/profile.page";
 
                     ChallengesPage.buttonValidateSolution.click();
                     expect($('//h5')).toHaveText('Congratulations! All tests have passed.');
-                    ChallengesPage.buttonSendToReview.click();
                     expect(ChallengesPage.buttonSendToReview).toBeEnabled();
+                    ChallengesPage.buttonSendToReview.click();
+                    LoginPage.open();
+                    LoginPage.login(credentials[1].username, credentials[1].password);
+                    $('.ant-dropdown-trigger.ant-dropdown-link').click();
+                    browser.pause(3000);
+                    $$('.ant-dropdown-menu-item.ant-dropdown-menu-item-only-child')[2].click();
+
+                    $('#name').setValue('Test_challenge_1');
+                    let numberOfRows = $$('//table/tbody/tr').length;
+                    for (let i = 1; i <= numberOfRows; i++ ) {
+                        expect($('//table/tbody/tr["+i+"]/td/a')).toHaveTextContaining('Test_challenge_1');
+                    }
+
 
                 });
 
                 it('make sure the new challenge appeared on the admin page ', () => {
+
+
+
+
+
 
 
                 })

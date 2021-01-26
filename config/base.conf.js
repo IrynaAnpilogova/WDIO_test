@@ -1,6 +1,6 @@
 module.exports = {
     specs: [
-        './test/specs/access.js'
+        './test/specs/createChallenge.js'
 
     ],
 

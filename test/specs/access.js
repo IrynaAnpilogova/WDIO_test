@@ -19,6 +19,10 @@ describe('My application\'s top menu ' , () => {
             password: "7896542"
         },
         {
+            username: "testermike@mail.ru", // student
+            password: "12345"
+        },
+        {
             username: "iryna.anpilogova@gmail.com", // student
             password: "123456"
         }
