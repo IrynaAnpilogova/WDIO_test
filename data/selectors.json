@@ -27,5 +27,7 @@
   "searchChallenge": "#name",
   "programmingLang": "#programmingLang",
   "challengeName": "#challengeForm_name",
-  "addInstruction": "#challengeForm_instruction"
+  "addInstruction": "#challengeForm_instruction",
+  "linkAdmin": ".ant-dropdown-trigger.ant-dropdown-link",
+  "linkAdminChallenges": ".ant-dropdown-menu-item.ant-dropdown-menu-item-only-child"
 }

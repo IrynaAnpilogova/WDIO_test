@@ -20,6 +20,8 @@ class Page {
     get linkChallenges () {return $(selectors.linkChallenges) }
     get linkShop () {return $(selectors.linkShop) }
     get linkChat () {return $(selectors.linkChat) }
+    get linkAdmin() {return $(selectors.linkAdmin)}
+    get linkAdminChallenges() {return $$(selectors.linkAdminChallenges)[2]}
 
 
     clearInput (element) {

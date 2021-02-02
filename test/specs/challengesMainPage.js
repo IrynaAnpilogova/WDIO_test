@@ -30,10 +30,12 @@ describe('Challenges main page ' ,() => {
         });
 
         it(' test_2 number of challenges on the page by default', () => {
-            let numberOfRows = $('.ml-3.h-100.d-flex.small').getText().split(' ')[1];
-            numberOfRows = +numberOfRows;
+            let arr = $('.mt-3').getText().split(' ');
+            let numberOfRows = +arr[4] - +arr[2] + 1;
             expect($$('.ant-table-row')).toBeElementsArrayOfSize(numberOfRows);
         });
+
+
 
         it(' test_3 filter - search challenge ', () => {
             ChallengesPage.searchChallenge.setValue('Anagram');
@@ -53,8 +55,8 @@ describe('Challenges main page ' ,() => {
         it(' test_5 after clear search field the number of challenges on the page is by default', () => {
             ChallengesPage.searchChallenge.click();
             ChallengesPage.clearInput(ChallengesPage.searchChallenge);
-            let numberOfRows = $('.ml-3.h-100.d-flex.small').getText().split(' ')[1];
-            numberOfRows = +numberOfRows;
+            let arr = $('.mt-3').getText().split(' ');
+            let numberOfRows = +arr[4] - +arr[2] + 1;
             expect($$('.ant-table-row')).toBeElementsArrayOfSize(numberOfRows);
         });
 
@@ -69,8 +71,8 @@ describe('Challenges main page ' ,() => {
             browser.pause(3000);
             $('#programmingLang').click();
             $$('.ant-select-item-option-content')[1].click(); //Java
-            let numberOfRows = $('.ml-3.h-100.d-flex.small').getText().split(' ')[1];
-            numberOfRows = +numberOfRows;
+            let arr = $('.mt-3').getText().split(' ');
+            let numberOfRows = +arr[4] - +arr[2] + 1;
             expect($$('.ant-table-row')).toBeElementsArrayOfSize(numberOfRows);
         });
 
@@ -123,8 +125,8 @@ describe('Challenges main page ' ,() => {
         it(' test_8 filter - programming language - All languages ', () => {
             // $('.ant-select-arrow').click();
             $$('.ant-select-item-option-content')[2].click(); // Java Script
-            let numberOfRows = $('.ml-3.h-100.d-flex.small').getText().split(' ')[1];
-            numberOfRows = +numberOfRows;
+            let arr = $('.mt-3').getText().split(' ');
+            let numberOfRows = +arr[4] - +arr[2] + 1;
             expect($$('.ant-table-row')).toBeElementsArrayOfSize(numberOfRows);
         });
 
